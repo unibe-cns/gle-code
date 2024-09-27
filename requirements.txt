@@ -1,0 +1,13 @@
+Gridspeccer==0.2.2
+matplotlib==3.9.2
+mnist1d==0.0.2.post1
+numpy==1.26.4
+pandas==2.2.0
+pydenticon==0.3.1
+scipy==1.11.4
+scikit-learn==1.4.2
+setuptools
+torch==2.2.0
+torchaudio==2.2.0
+torchvision==0.17.0
+tqdm==4.56.0

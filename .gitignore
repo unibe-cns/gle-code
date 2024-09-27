@@ -1,0 +1,15 @@
+# Python virtual environment
+venv
+
+# folders
+data
+plots
+
+# Python cache
+__pycache__
+
+# PyTorch models
+*.pt
+
+# generated datasets
+*.pkl
