@@ -41,7 +41,6 @@ if __name__ == '__main__':
         'gamma': 0.0,
         'tau': 2.0,
         'max_memory_tau': 1.8,
-        'n_updates': 1,
     }
 
     torch.manual_seed(params["seed"])

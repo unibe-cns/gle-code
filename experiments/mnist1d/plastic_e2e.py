@@ -42,7 +42,6 @@ if __name__ == '__main__':
         "tau": 1.2,
         "beta": 1.0,
         "gamma": 0.0,
-        "n_updates": 1,
         "prospective_errors": True,
         "use_cuda": True,
     }

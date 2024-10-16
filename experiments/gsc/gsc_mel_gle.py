@@ -217,7 +217,6 @@ if __name__ == "__main__":
     print('Using {} steps per sample.'.format(params['steps_per_sample']))
 
     # rescale learning rate if steps per sample is not 40
-    # rescale learning rate if n_updates is not 1
     params['lr'] *= params['dt']  * (16000 / 512 / 0.05) / params['steps_per_sample'] # varies with dt and if steps_per_sample is not 640 (= 16000 / 512 / 0.05)
     print('Using learning rate {}.'.format(params['lr']))
 
