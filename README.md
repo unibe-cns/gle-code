@@ -1,6 +1,10 @@
 # Code repository for the paper "Backpropagation through space, time and the brain"
 This repository contains the code to reproduce the results and figures of the preprint "Backpropagation through space, time and the brain" which can be found on [arXiv](https://arxiv.org/abs/2403.16933).
 
+### Warning: Patent Protection Notice
+This code repository contains procedures that are registered for patent protection. Unauthorized use, reproduction, or distribution of this code or its underlying procedures may infringe on our patent rights.
+
+## Repository structure
 The code is organized as follows:
 - GLE layers, dynamics and abstract_net are implemented in the corresponding files in `lib/gle/` directory
 - The `data` directory contains code to generate small datasets (e.g., XOR, Yin-Yang) and helper functions to modify the MNIST-1D dataset
