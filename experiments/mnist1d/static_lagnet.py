@@ -6,12 +6,12 @@ import pandas as pd
 import pickle
 
 from data.datasets import get_mnist1d_splits
-from .mnist1d_training import mnist1d_run
-from .networks import GLELagWindow, GLETDNN
+from mnist1d_training import mnist1d_run
+from networks import GLELagWindow, GLETDNN
 from lib.utils import get_loss_and_derivative
-from lib.gle.abstract_net import GLEAbstractNet
-from lib.gle.layers import GLELinear
-from lib.gle.dynamics import GLEDynamics
+from lib.abstract_net import GLEAbstractNet
+from lib.layers import GLELinear
+from lib.dynamics import GLEDynamics
 
 
 if __name__ == '__main__':
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     print("Using {} loss with {} output nonlinearity.".format(params['loss_fn'], params['output_phi']))
 
     # train using LE-TDNN
-    from .networks import GLETDNN
+    from networks import GLETDNN
     GLETDNN.compute_target_error = loss_fn_deriv
     model = GLETDNN(input_size=params['input_size'], dt=params['dt'],
                     hidden_size=params['hidden_size'], output_size=10,

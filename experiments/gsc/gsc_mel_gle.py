@@ -4,10 +4,10 @@ import argparse
 import torch
 import numpy as np
 
-from .gsc_training import gsc_run
-from lib.gle.abstract_net import GLEAbstractNet
-from lib.gle.layers import GLELinear
-from lib.gle.dynamics import GLEDynamics
+from gsc_training import gsc_run
+from lib.abstract_net import GLEAbstractNet
+from lib.layers import GLELinear
+from lib.dynamics import GLEDynamics
 from lib.utils import get_loss_and_derivative, get_phi_and_derivative
 from data.gsc import get_gsc_dataloaders2, ALL_LABELS, KW12_LABELS
 

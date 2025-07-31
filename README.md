@@ -20,7 +20,7 @@ See below for instructions on how to reproduce the experiments and figures.
 The code was tested with Python 3.11.9 and 3.12.5 but should work with other versions as well.
 Packages are pinned to specific versions (see `requirements.txt`) to ensure reproducibility and can be installed using the following command (ideally in a virtual environment):
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 The code works with both CPU and GPU and should automatically detect the available hardware.
 ## Reproducing the experiments
@@ -29,7 +29,7 @@ All experiments should be run from the root directory of the repository (see bel
 ### Teacher-student experiments
 For the LagLine teacher-student experiments in Figure 5, run the following command:
 ```bash
-python -m experiments.mimic.lagline  --model='gle'
+python experiments/mimic/lagline  --model='gle'
 ```
 Available models are
 - instantaneous BP: `bp`
@@ -40,7 +40,7 @@ A single run of the experiment will take a few minutes and results will be saved
 
 For the LagNet experiment in Figure 6, run the following command:
 ```bash
-python -m experiments.mimic.lagnet
+python experiments/mimic/lagnet
 ```
 A run of the experiment will take a few minutes and results will be saved in the `results/lagnet` directory.
 
@@ -48,7 +48,7 @@ A run of the experiment will take a few minutes and results will be saved in the
 For the MNIST-1D experiments in Figure 8, there is are separate scripts for the different architectures:
 The command for the end-to-end trained GLE network is:
 ```bash
-python -m experiments.mnist1d.plastic_e2e --seed=0
+python experiments/mnist1d/plastic_e2e --seed=0
 ```
 Results will be saved in the `results/mnist1d` directory.
 Use the `--seed` argument to set the random seed for reproducibility (although results might still vary depending on the hardware used for training).
@@ -58,7 +58,7 @@ A single run of the experiment will take around 2 hours.
 
 Similarly, the command for static LagNet is with an (G)LE-MLP on top is:
 ```bash
-python -m experiments.mnist1d.static_lagnet --seed=0
+python experiments/mnist1d/static_lagnet --seed=0
 ```
 Results will be saved in the `results/mnist1d` directory.
 To obtain the results in the paper we used seeds 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9.
@@ -66,7 +66,7 @@ A single run of the experiment will take around 1.5 hours.
 
 For the GSC experiments in Figure 8, run the following command:
 ```bash
-python -m experiments.gsc.gsc_mel_gle --max-epochs=420 --seed=0
+python experiments/gsc/gsc_mel_gle --max-epochs=420 --seed=0
 ```
 Results will be saved in the `results/gsc` directory.
 To obtain the results in the paper we used seeds 1, 2, 3, 5, 7, 8, 12, 113, 114, 115.

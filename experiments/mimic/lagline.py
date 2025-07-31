@@ -3,9 +3,9 @@
 import torch
 import torch.nn as nn
 
-from lib.gle.abstract_net import GLEAbstractNet
-from lib.gle.layers import GLELinear
-from lib.gle.dynamics import GLEDynamics
+from lib.abstract_net import GLEAbstractNet
+from lib.layers import GLELinear
+from lib.dynamics import GLEDynamics
 from lib.utils import get_loss_and_derivative
 
 

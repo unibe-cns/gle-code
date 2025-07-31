@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gle-code"
+version = "1.0"
+description = "Code used to reproduce the results of the GLE paper."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "GNU General Public License v3.0" }
+authors = [
+  { name = "Paul Haider", email = "paul.haider@unibe.ch" },
+]
+
+dependencies = [
+    "Gridspeccer",
+    "matplotlib",
+    "mnist1d",
+    "numpy",
+    "pandas",
+    "pydenticon",
+    "scipy",
+    "scikit-learn",
+    "torch==2.6.0",
+    "torchaudio",
+    "torchvision",
+    "tqdm",
+]
+
+[tool.setuptools.packages.find]
+include = [
+    "lib",
+    "data",
+    "experiments",
+    "experiments/mnist1d",
+    "experiments/classification"
+]
